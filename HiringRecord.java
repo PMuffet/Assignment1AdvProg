@@ -8,4 +8,14 @@ public class HiringRecord {
 	private DateTime actualReturnDate;
 	private double rentalFee;
 	private double lateFee;
+
+	DateTime today = new DateTime();
+	DateTime maxRentalDate = new DateTime(today, 10);
+	
+	
+	
+	
+	
+	
+	
 }
