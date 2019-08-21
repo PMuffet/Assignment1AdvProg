@@ -1,3 +1,6 @@
+import util.DateTime;
+
+
 
 public abstract class Room {
 
@@ -11,7 +14,9 @@ public abstract class Room {
 	private String feature;
 	private String type;
 	private Character status;
-
+	private String customerID;
+	
+	
 	private HiringRecord[] records = new HiringRecord[MAX_RECORD_SIZE];
 
 	public Room(String id, int numBeds, String feature, String type, Character status, HiringRecord[] records) {
@@ -24,6 +29,25 @@ public abstract class Room {
 
 	}
 
+	//Abstract Methods
+	
+	public abstract boolean rent(String customerID, DateTime rentDate, int numOfRentDay);
+	
+	public abstract boolean returnRoom(DateTime returnDate);
+	
+	public abstract boolean performMaintenace();
+	
+	public abstract boolean completeMaintenace(DateTime completionDate);
+	
+	public abstract String toString();
+	
+	public abstract String getDetails();
+	
+	
+	
+	
+	
+	
 	
 	
 	
